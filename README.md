@@ -1,27 +1,23 @@
-EasternColorJsonTransBundle
+EasternColorDoctrineToolsBundle
 =========================
-This Symfony bundle provide entity trasnlation using single DB column.
-** This is known as an anti-pattern to store translation in json format.
+This Symfony bundle provide a set of doctrine tools
 
 Installation
 ------------
-1. `composer require eastern-color/json-trans-bundle`
+1. `composer require eastern-color/doctrine-tools-bundle`
 2. Enable bundle in symfony's __/app/AppKernel.php__
-    - `new EasternColor\JsonTransBundle\EasternColorJsonTransBundle()`,
+    - `new EasternColor\JsonTransBundle\EasternColorDoctrineToolsBundle()`,
 
 Prerequisites
 -------------
 
 TODO
 ----
-- Add configurable emtpy-fallback to translate between zh-hant and zh-hans
-- Add routing to translate between zh-hant and zh-hans
-- Add support to Symfony serializer group
-- Remove dependency to [JMSSerializerBundle](https://github.com/schmittjoh/JMSSerializerBundle)
 - Extends this README
 
 Command
 -------
+- `php bin\console ec:doctrine-tools:dump-type-enum`
 
 Basic Usage (route option)
 --------------------------
