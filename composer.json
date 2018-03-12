@@ -1,0 +1,29 @@
+{
+    "name": "eastern-color/doctrine-tools-bundle",
+    "description": "A set of doctrine tools",
+    "keywords": ["Doctrine","Symfony","tools","enum"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Peter",
+            "email": "peter.ho@360img.net",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "EasternColor\\DoctrineToolsBundle\\": ""
+        }
+    },
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "require-dev": {
+    },
+    "suggest": {
+        "fresh/doctrine-enum-bundle": "Provide Enum to doctrine"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
