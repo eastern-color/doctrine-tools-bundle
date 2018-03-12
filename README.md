@@ -18,6 +18,11 @@ TODO
 Command
 -------
 - `php bin\console ec:doctrine-tools:dump-type-enum`
+```yml
+# app/config/config.yml
+imports:
+    - { resource: generated/config_doctrine_dbal_enum_types.yml }
+```
 
 Basic Usage (route option)
 --------------------------

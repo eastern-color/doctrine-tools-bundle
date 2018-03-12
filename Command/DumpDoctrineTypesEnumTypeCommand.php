@@ -1,6 +1,6 @@
 <?php
 
-namespace EasternColor\CoreBundle\Command;
+namespace EasternColor\DoctrineToolsBundle\Command;
 
 use Exception;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
@@ -60,6 +60,14 @@ class DumpDoctrineTypesEnumTypeCommand extends ContainerAwareCommand
         $io->text('Founded types:');
         $io->listing($result);
 
-        file_put_contents(getcwd().'/app/config/generated/config_doctrine_dbal_enum_types.yml', implode(PHP_EOL, $ymlResult));
+        if (count($ymlResult) > 0) {
+            $path = getcwd().'/app/config/generated/';
+            $file = $path.'config_doctrine_dbal_enum_types.yml';
+            if (!is_dir($path)) {
+                mkdir($path);
+            }
+            file_put_contents($file, implode(PHP_EOL, $ymlResult));
+            $io->text('File generated: '.$file);
+        }
     }
 }
